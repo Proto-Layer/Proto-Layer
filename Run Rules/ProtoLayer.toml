@@ -1,0 +1,80 @@
+# General Information
+version = "2024.08.31-beta"
+chain_name = "ProtoLayer Core"
+owner_signature = "CHAIN_OWNER_SIGNATURE"  # Chain owner's verification signature placeholder
+code_location = "ONCHAIN" # Location on the blockchain where executable pseudo code resides
+min_validator_score = 420
+min_partner_score = 440
+
+# Validator Management
+[max_validators]
+max = 12
+
+[[known_validators]]
+public_key = "proto_validator_key_1"
+contact = {method = "TCP", ip = "127.0.0.1", port = 5544}
+
+[[known_validators]]
+public_key = "proto_validator_key_2"
+contact = {method = "TCP", ip = "127.0.0.1", port = 5545}
+
+[[known_validators]]
+public_key = "proto_validator_key_3"
+contact = {method = "TCP", ip = "127.0.0.1", port = 5546}
+
+# Known validator limit: up to 44% of max_validators allowed
+
+# Job File Structure
+[base_job_file]
+fields = ["client_id", "job_category", "partner_min", "block_ref", "block_timestamp", "priority_level"]
+mandatory = ["client_id", "state", "block_ref"]
+job_types = ["payment", "bidding", "name_registry", "storage_req", "secure_mail"]
+token = "PLT"  # Native token for transactions
+
+[co_chains.marketplace]
+fields = ["market_event"]
+mandatory = ["market_event"]
+job_types = ["start_auction", "place_bid", "close_auction"]
+
+# Utility Functions
+[utilities.funds_check]
+fee = 0.006
+arguments = ["public_key", "alias"]
+description = "Retrieve balance using a public key or alias."
+
+[utilities.marketplace_access]
+fee = 0.025
+arguments = ["listing_action", "asset_tag"]
+description = "Access marketplace to list or query assets."
+
+# Co-Chains and Sub-Domains
+[co_chains_linked]
+layer1 = "CoLayerX"
+layer2 = "CoLayerY"
+
+[sub_domains.region_us]
+name = "US_NodeRegion"
+linked_co_chains = ["CoLayerX"]
+
+[sub_domains.region_uk]
+name = "UK_NodeRegion"
+linked_co_chains = ["CoLayerY"]
+
+# Governance and Tokenomics
+[tokenomics]
+token_issuance = "capped"
+payout_timing = "hourly"
+
+[governance]
+voting_period = "5 days"
+quorum = "60%"
+
+# Performance Metrics
+[performance]
+max_block_time = 8  # seconds
+latency_threshold = 180  # milliseconds
+
+# Subscription Services (Optional)
+[subscription_services]
+basic_tier = { cost = 1.2, description = "Entry-level subscription with standard features." }
+pro_tier = { cost = 6.0, description = "Advanced subscription with premium tools and benefits." }
