@@ -1,0 +1,40 @@
+# Network info
+NETWORK_ID = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+CORE_MAJOR_VERSION = 0
+FIRST_EPOCH_START_TIMESTAMP = 1_749_254_009_203
+
+# Network parameters
+NETWORK_PARAMETERS = {
+    "VALIDATOR_STAKE": "50000000000000000000000",
+    "MINIMAL_STAKE_PER_ENTITY": "20000000000000000000",
+    "QUORUM_SIZE": 127,
+    "EPOCH_TIME": 120_000,
+    "LEADERSHIP_TIMEFRAME": 120_000,
+    "BLOCK_TIME": 1_000,
+    "MAX_BLOCK_SIZE_IN_BYTES": 12_288_000,
+    "TXS_LIMIT_PER_BLOCK": 30_000
+}
+
+# Pools configuration
+POOLS = {
+    "9GQ46rqY238rk2neSwgidap9ww5zbAN4dyqyC7j5ZnBK": {
+        "PERCENTAGE": 50,
+        "PERCEPTION_SCORE": 0,
+        "TOTAL_STAKED": "55000000000000000000000",
+        "POOLURL": "localhost:7332",
+        "STAKERS": {
+            "9GQ46rqY238rk2neSwgidap9ww5zbAN4dyqyC7j5ZnBK": {
+                "STAKE": "1000000000000000000000"
+            }
+        }
+    }
+}
+
+# State configuration
+STATE = {
+    "9GQ46rqY238rk2neSwgidap9ww5zbAN4dyqyC7j5ZnBK": {
+        "TYPE": "eoa",
+        "BALANCE": 20_000_000,
+        "NONCE": 0
+    }
+}
