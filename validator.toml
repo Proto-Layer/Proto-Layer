@@ -1,0 +1,61 @@
+[Validator]
+name = '@proto_test'
+public_key = '0xABCDEF987654321'
+
+# Networks the validator participates in...
+
+[[Chains]]
+name = "ProtoLayer Main"
+chain_ID = 100
+network_ID = 1 # staging network
+[[Chains.preferred_validators]]
+name = "Aria"
+public_key = "0xA1"
+protocol = "IP"
+address = "10.0.0.11"
+
+[[Chains.preferred_validators]]
+name = "Kai"
+public_key = "0xB2"
+protocol = "IP"
+address = "10.0.0.12"
+
+[[Chains.preferred_validators]]
+name = "Nova"
+public_key = "0xC3"
+protocol = "LoRaWAN"
+address = "B827EBFFFE7B90AB"
+
+[[Chains]]
+name = "DocumentNet"
+chain_ID = 101
+network_ID = 1
+[[Chains.preferred_validators]]
+name = "Aria"
+public_key = "0xA1"
+protocol = "IP"
+address = "10.0.0.11"
+
+[[Chains.preferred_validators]]
+name = "Kai"
+public_key = "0xB2"
+protocol = "IP"
+address = "10.0.0.12"
+
+[[Chains.preferred_validators]]
+name = "Nova"
+public_key = "0xC3"
+protocol = "LoRaWAN"
+address = "B827EBFFFE7B90AB"
+
+[[Chains]]
+name = "ProtoQuery"
+chain_ID = 102
+network_ID = 1
+[[Chains.preferred_validators]]
+name = "Aria"
+public_key = "0xA1"
+protocol = "IP"
+address = "10.0.0.11"
+
+[[Chains.preferred_valida_]()]()
