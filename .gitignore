@@ -1,0 +1,14 @@
+.venv/
+venv
+.vscode/
+__pycache__/
+test/
+accounts/
+*.log
+*.1
+*.2
+*.3
+*.4
+*.pyc
+*.db
+*.mp3
