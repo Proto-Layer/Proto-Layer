@@ -1,0 +1,23 @@
+[routes]
+"gateway" = { ip = "127.0.0.1", port = 4444, transport = "TCP" }
+"nodeA"   = { ip = "192.168.1.10", port = 5000, transport = "TCP" }
+"nodeB"   = { ip = "192.168.1.11", port = 5001, transport = "UDP" }
+
+[mesh.0]
+
+[mesh.0.zone.0]
+
+[mesh.0.zone.0.CoreChain]
+release = "2024.08.12.0" # Format: Year.Month.Day.Patch
+validators = ["127.0.0.1:4444"]
+linked_chains = ["mimic", "pages"]
+
+[mesh.0.zone.0.Mimic]
+release = "2024.08.13.0"
+validators = ["127.0.0.1:4444"]
+linked_chains = ["sqeel"]
+
+[mesh.0.zone.0.Pages]
+release = "2024.08.14.0"
+validators = ["127.0.0.1:4444"]
+linked_chains = [""]
